@@ -1,6 +1,7 @@
 package Ejercicio12;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Libro extends Publicacion implements Prestable{
     private boolean prestado;
@@ -21,19 +22,19 @@ public class Libro extends Publicacion implements Prestable{
 
     @Override
     public void prestar() {
+        prestado= true;
     }
 
     @Override
     public void devolver() {
+        prestado=false;
 
     }
 
     @Override
-    public void prestado() {
+    public boolean prestado() {
 
-    }
-
-    public boolean isPrestado() {
         return prestado;
     }
+
 }

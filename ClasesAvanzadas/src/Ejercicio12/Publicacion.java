@@ -21,9 +21,6 @@ public abstract class Publicacion {
         return fechaPublicacion;
     }
 
-    @Override
-    public abstract String toString();
-
     public  String getTituto(){
         return tituto;
     }

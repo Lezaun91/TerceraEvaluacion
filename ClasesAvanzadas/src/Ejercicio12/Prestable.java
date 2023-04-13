@@ -6,5 +6,5 @@ public interface Prestable {
 
     void devolver();
 
-    void prestado();
+    boolean prestado();
 }

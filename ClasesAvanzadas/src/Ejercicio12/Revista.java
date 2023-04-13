@@ -11,26 +11,16 @@ public class Revista extends Publicacion{
         this.numero=numero;
     }
 
-    @Override
-    public int getCodigo() {
-        return 0;
-    }
 
-    @Override
-    public LocalDate getFechaPublicacion() {
-        return null;
-    }
+
 
     @Override
     public String toString() {
-        return "Revista{" +
+        return "Revista" + getTituto() +
                 "numero=" + numero +
-                '}';
+                "año " + getFechaPublicacion();
     }
 
-    @Override
-    public String getTituto() {
-        return null;
-    }
+
 
 }

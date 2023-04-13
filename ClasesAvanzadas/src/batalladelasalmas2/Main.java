@@ -22,16 +22,7 @@ public class Main {
         sb.append("\nBondad de los ángeles: " + bondadAngeles(humano));
         sb.append("\nMaldad de los demonios: " + maldadDemonios(humano));
         System.out.println(sb);
-        if (bondadAngeles(humano) > maldadDemonios(humano)) {
-            System.out.println(bondadAngeles(humano) + " > " + maldadDemonios(humano)
-                    + " --> El humano reza, por lo que tiene un angel mas y la fe del humano aumenta");
-            humano.rezar();
-        } else {
-            System.out.println(maldadDemonios(humano) + " > " + bondadAngeles(humano)
-                    + " --> El humano peca, por lo que tiene un demonio mas y la fe del humano disminuye");
-            humano.pecar();
-
-        }
+        bondadOMaldad(humano);
     }
     public static int bondadAngeles(Humano humano) {
             int bondadTotal = 0;
@@ -57,6 +48,7 @@ public class Main {
             sb.append(maldadDemonios(humano));
             sb.append(" --> ");
             sb.append(" El humano reza, por lo que tiene un angel mas y la fe del humano aumenta");
+            System.out.println(sb);
             humano.rezar();
         }else {
             StringBuilder sb = new StringBuilder();
@@ -65,6 +57,7 @@ public class Main {
             sb.append(bondadAngeles(humano));
             sb.append(" --> ");
             sb.append(" El humano peca, por lo que tiene un demonio mas y la fe del humano disminuye");
+            System.out.println(sb);
             humano.pecar();
         }
         }
